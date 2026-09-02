@@ -8,23 +8,90 @@
   <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <link rel="stylesheet" href="products.css">
 </head>
 
 <body>
-  <header class="header">
-    <h1>Petit Sucre</h1>
-    <div class="sp-menu">
-      <div>
-        <button id="cart">・ｖ・</button>
-      </div>
+  <div id="root">
+    <header class="header">
+      <h1><a href="#" class="logo">Petit Sucre</a></h1>
+      <button class="cart">
+        <img src="icons/cart.svg" alt="">
+        <span class="cart__total">2</span>
+      </button>
       <div class="sp-hamburger">
-        <span></span>
+        <span class="line"></span>
+        <span class="line"></span>
       </div>
-    </div>
-  </header>
-  <footer class="footer">
-    
-  </footer>
+    </header>
+    <main>
+      <div class="container">
+        <form class="search-form">
+          <input type="text" placeholder="商品名で検索">
+          <button>検索</button>
+        </form>
+        <div class="select-category">
+          <p>絞り込み：</p>
+          <select>
+            <option value="all">すべて</option>
+            <option value="all">ケーキ</option>
+            <option value="all">タルト</option>
+            <option value="all">クッキー</option>
+            <option value="all">焼き菓子</option>
+          </select>
+        </div>
+        <div class="products">
+          <div class="products__card">
+            <div>
+              <div class="img">画像</div>
+            </div>
+            <div>
+              <p>商品名</p>
+              <p>450円</p>
+              <div class="products__btn select-count">
+                <div class="flex">
+                  <button>−</button>
+                  <span>1</span>
+                  <button>+</button>
+                </div>
+                <button class="count-reset">
+                  <img src="icons/trash.svg">
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="products__card">
+            <div>
+              <div class="img">画像</div>
+            </div>
+            <div>
+              <p>商品名</p>
+              <p>1,450円</p>
+              <div class="products__btn">
+                <button class="add-cart">カートに追加</button>
+              </div>
+            </div>
+          </div>
+          <div class="products__card">
+            <div>
+              <div class="img">画像</div>
+            </div>
+            <div>
+              <p>商品名</p>
+              <p>450円</p>
+              <div class="products__btn">
+                <button class="add-cart">カートに追加</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <a href="#" class="logo">Petit Sucre</a>
+      <small>&copy; Petit Sucre</small>
+    </footer>
+  </div>
 </body>
 
 </html>
