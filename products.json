@@ -1,0 +1,188 @@
+[
+  {
+    "id": 1,
+    "category": "cakes",
+    "name": "苺のショートケーキ",
+    "price": 580
+  },
+  {
+    "id": 2,
+    "category": "cakes",
+    "name": "濃厚ガトーショコラ",
+    "price": 620
+  },
+  {
+    "id": 3,
+    "category": "cakes",
+    "name": "ベイクドチーズケーキ",
+    "price": 600
+  },
+  {
+    "id": 4,
+    "category": "cakes",
+    "name": "レアチーズケーキ",
+    "price": 550
+  },
+  {
+    "id": 5,
+    "category": "cakes",
+    "name": "マロンのモンブラン",
+    "price": 650
+  },
+  {
+    "id": 6,
+    "category": "cakes",
+    "name": "濃厚ティラミス",
+    "price": 600
+  },
+  {
+    "id": 7,
+    "category": "baked-goods",
+    "name": "発酵バターのフィナンシェ",
+    "price": 280
+  },
+  {
+    "id": 8,
+    "category": "baked-goods",
+    "name": "アーモンドマドレーヌ",
+    "price": 260
+  },
+  {
+    "id": 9,
+    "category": "baked-goods",
+    "name": "ショコラブラウニー",
+    "price": 320
+  },
+  {
+    "id": 10,
+    "category": "baked-goods",
+    "name": "紅茶のパウンドケーキ",
+    "price": 480
+  },
+  {
+    "id": 11,
+    "category": "baked-goods",
+    "name": "レモンケーキ",
+    "price": 300
+  },
+  {
+    "id": 12,
+    "category": "baked-goods",
+    "name": "抹茶のガレット・ブルトンヌ",
+    "price": 380
+  },
+  {
+    "id": 13,
+    "category": "cookies",
+    "name": "バニラサブレ",
+    "price": 450
+  },
+  {
+    "id": 14,
+    "category": "cookies",
+    "name": "チョコチップクッキー",
+    "price": 480
+  },
+  {
+    "id": 15,
+    "category": "cookies",
+    "name": "アールグレイクッキー",
+    "price": 500
+  },
+  {
+    "id": 16,
+    "category": "cookies",
+    "name": "塩バタークッキー",
+    "price": 420
+  },
+  {
+    "id": 17,
+    "category": "cookies",
+    "name": "ラズベリーサブレ",
+    "price": 470
+  },
+  {
+    "id": 18,
+    "category": "cookies",
+    "name": "ピスタチオクッキー",
+    "price": 520
+  },
+  {
+    "id": 19,
+    "category": "tarts",
+    "name": "季節のフルーツタルト",
+    "price": 680
+  },
+  {
+    "id": 20,
+    "category": "tarts",
+    "name": "キャラメルナッツタルト",
+    "price": 650
+  },
+  {
+    "id": 21,
+    "category": "tarts",
+    "name": "濃厚チョコレートタルト",
+    "price": 670
+  },
+  {
+    "id": 22,
+    "category": "tarts",
+    "name": "レモンタルト",
+    "price": 620
+  },
+  {
+    "id": 23,
+    "category": "tarts",
+    "name": "抹茶と小豆のタルト",
+    "price": 690
+  },
+  {
+    "id": 24,
+    "category": "tarts",
+    "name": "アップルシナモンタルト",
+    "price": 640
+  },
+  {
+    "id": 25,
+    "category": "macarons",
+    "name": "桜のマカロン",
+    "price": 420
+  },
+  {
+    "id": 26,
+    "category": "macarons",
+    "name": "アールグレイのマカロン",
+    "price": 440
+  },
+  {
+    "id": 27,
+    "category": "macarons",
+    "name": "抹茶マカロン",
+    "price": 440
+  },
+  {
+    "id": 28,
+    "category": "macarons",
+    "name": "ホワイトチョコレートのマカロン",
+    "price": 420
+  },
+  {
+    "id": 29,
+    "category": "macarons",
+    "name": "バナナキャラメルマカロン",
+    "price": 450
+  },
+  {
+    "id": 30,
+    "category": "macarons",
+    "name": "白あんと苺のマカロン",
+    "price": 460
+  },
+  {
+    "id": 31,
+    "category": "macarons",
+    "name": "ピスタチオマカロン",
+    "price": 470
+  }
+]
