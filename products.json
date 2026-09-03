@@ -3,67 +3,78 @@
     "id": 1,
     "category": "cakes",
     "name": "苺のショートケーキ",
-    "price": 580
+    "price": 580,
+    "image": "/product-images/01_cakes.png"
   },
   {
     "id": 2,
     "category": "cakes",
     "name": "濃厚ガトーショコラ",
-    "price": 620
+    "price": 620,
+    "image": "/product-images/02_cakes.png"
   },
   {
     "id": 3,
     "category": "cakes",
     "name": "ベイクドチーズケーキ",
-    "price": 600
+    "price": 600,
+    "image": "/product-images/03_cakes.png"
   },
   {
     "id": 4,
     "category": "cakes",
     "name": "レアチーズケーキ",
-    "price": 550
+    "price": 550,
+    "image": "/product-images/04_cakes.png"
   },
   {
     "id": 5,
     "category": "cakes",
     "name": "マロンのモンブラン",
-    "price": 650
+    "price": 650,
+    "image": "/product-images/05_cakes.png"
   },
   {
     "id": 6,
     "category": "cakes",
     "name": "濃厚ティラミス",
-    "price": 600
+    "price": 600,
+    "image": "/product-images/06_cakes.png"
   },
   {
     "id": 7,
     "category": "baked-goods",
     "name": "発酵バターのフィナンシェ",
-    "price": 280
+    "price": 280,
+    "image": "/product-images/07_baked-goods.png"
   },
   {
     "id": 8,
     "category": "baked-goods",
     "name": "アーモンドマドレーヌ",
-    "price": 260
+    "price": 260,
+    "image": "/product-images/08_baked-goods.png"
   },
   {
     "id": 9,
     "category": "baked-goods",
     "name": "ショコラブラウニー",
-    "price": 320
+    "price": 320,
+    "image": "/product-images/09_baked-goods.png"
   },
   {
     "id": 10,
     "category": "baked-goods",
     "name": "紅茶のパウンドケーキ",
-    "price": 480
+    "price": 480,
+    "image": "/product-images/10_baked-goods.png"
   },
   {
     "id": 11,
     "category": "baked-goods",
-    "name": "レモンケーキ",
-    "price": 300
+    "name": "爽やかレモンのパウンドケーキ",
+    "price": 480,
+    "image": "/product-images/11_baked-goods.png"
   },
   {
     "id": 12,
@@ -98,7 +109,7 @@
   {
     "id": 17,
     "category": "cookies",
-    "name": "ラズベリーサブレ",
+    "name": "3種ベリーのサブレ",
     "price": 470
   },
   {
@@ -134,7 +145,7 @@
   {
     "id": 23,
     "category": "tarts",
-    "name": "抹茶と小豆のタルト",
+    "name": "抹茶クリームと苺のタルト",
     "price": 690
   },
   {

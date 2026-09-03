@@ -30,13 +30,7 @@ body {
 img {
   display: block;
   width: 100%;
-}
-
-.img {
-  background: lightgray;
-  width: 100%;
-  height: 150px;
-  text-align: center;
+  height: auto;
 }
 
 .logo {
@@ -49,6 +43,7 @@ img {
   position: fixed;
   display: flex;
   align-items: center;
+  background: rgba(255, 255, 255, .5);
   backdrop-filter: blur(10px);
   padding-left: 12px;
   box-shadow: 0 0 4px 0px rgba(0, 0, 0, .35);
@@ -107,7 +102,7 @@ main {
 .container {
   /* max-width: 375px; */
   margin: 0 auto;
-  padding: 0 4%;
+  padding: 0 3%;
 }
 
 /* 検索・絞り込み */
@@ -159,7 +154,7 @@ main {
 
 .select-category select {
   font-size: 12px;
-  padding: 8px;
+  padding: 8px 20px 8px 8px;
   line-height: 25px;
   border: 1px solid gray;
   color: #333;
@@ -222,8 +217,9 @@ main {
 
 .select-count button:not(.count-reset) {
   all: unset;
-  padding: 0 16px;
+  width: 44px;
   font-size: 25px;
+  text-align: center;
   cursor: pointer;
 }
 
@@ -234,9 +230,8 @@ main {
 }
 
 .count-reset img {
-  width: 44px;
-  height: 44px;
-  padding: 0;
+  width: 40px;
+  height: 40px;
 }
 
 .select-count span {

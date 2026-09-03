@@ -92,6 +92,149 @@
       <small>&copy; Petit Sucre</small>
     </footer>
   </div>
+
+  <script type="text/babel">
+    'use strict';
+    {
+      const categories = [
+        { "name": "ケーキ", "className": "cakes" },
+        { "name": "タルト", "className": "tarts" },
+        { "name": "クッキー", "className": "cookies" },
+        { "name": "マカロン", "className": "macarons" },
+        { "name": "焼き菓子", "className": "baked-goods" }
+      ];
+
+      const SearchForm = (props) => {
+        return (
+          <form className="search-form">
+            <input type="text" placeholder="商品名で検索" />
+            <button>検索</button>
+          </form>
+        );
+      };
+
+      const SelectOption = (props) => {
+        return (
+          <option value={props.className}>{props.name}</option>
+        );
+      };
+
+      const ProductCard = (props) => {
+        return (
+          <div className="products__card">
+            <div>
+              <img src={props.image} alt="" />
+            </div>
+            <div>
+              <p>{props.name}</p>
+              <p>{props.price}円</p>
+              <div className="products__btn select-count">
+                <div className="flex">
+                  <button>−</button>
+                  <span>{props.count}</span>
+                  <button>+</button>
+                </div>
+                <button className="count-reset">
+                  <img src="icons/trash_big.svg" />
+                </button>
+              </div>
+            </div>
+          </div>
+        );
+      };
+
+      const App = () => {
+        const [counts, setCounts] = React.useState({});
+
+        const [products, setProducts] = React.useState([]);
+
+        React.useEffect(() => {
+          const getProducts = async () => {
+            try {
+              const response = await fetch('/products.json');
+              const productsData = await response.json();
+              setProducts(productsData);
+              setCounts(Object.fromEntries(productsData.map((product) => [product.id, 0])));
+            } catch (err) {
+              console.log('商品データの取得に失敗しました');
+            }
+          };
+          getProducts();
+        }, []);
+
+        const categoryItems = categories.map((category) => {
+          return (
+            <SelectOption
+              key={category.className}
+              name={category.name}
+              category={category.className}
+            />
+          );
+        });
+
+        const productCards = products.map((product) => {
+          return (
+            <ProductCard
+              key={product.id}
+              image={product.image}
+              name={product.name}
+              category={product.category}
+              price={product.price}
+              count={counts[product.id]}
+            />
+          );
+        });
+        return (
+          <>
+            <header className="header">
+              <h1><a href="#" className="logo">Petit Sucre</a></h1>
+              <button className="cart">
+                <img src="icons/cart.svg" alt="ショッピングカート" />
+                <span className="cart__total">2</span>
+              </button>
+              <div className="sp-hamburger">
+                <span className="line"></span>
+                <span className="line"></span>
+              </div>
+            </header>
+            <main>
+              <div className="container">
+                <SearchForm />
+                <div className="select-category">
+                  <p>絞り込み：</p>
+                  <select>
+                    <option value="all">すべて</option>
+                    {categoryItems}
+                  </select>
+                </div>
+                <div className="products">
+                  {productCards}
+                  <div className="products__card">
+                    <div>
+                      <div className="img">画像</div>
+                    </div>
+                    <div>
+                      <p>商品名</p>
+                      <p>1,450円</p>
+                      <div className="products__btn">
+                        <button className="add-cart">カートに追加</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </main>
+            <footer className="footer">
+              <a href="#" className="logo">Petit Sucre</a>
+              <small>&copy; Petit Sucre</small>
+            </footer>
+          </>
+        );
+      };
+      const root = ReactDOM.createRoot(document.querySelector('#root'));
+      root.render(<App />);
+    }
+  </script>
 </body>
 
 </html>
