@@ -4,161 +4,161 @@
     "category": "cakes",
     "name": "苺のショートケーキ",
     "price": 580,
-    "image": "/product-images/01_cakes.png"
+    "image": "product-images/01_cakes.png"
   },
   {
     "id": 2,
     "category": "cakes",
     "name": "濃厚ガトーショコラ",
     "price": 620,
-    "image": "/product-images/02_cakes.png"
+    "image": "product-images/02_cakes.png"
   },
   {
     "id": 3,
     "category": "cakes",
     "name": "ベイクドチーズケーキ",
     "price": 600,
-    "image": "/product-images/03_cakes.png"
+    "image": "product-images/03_cakes.png"
   },
   {
     "id": 4,
     "category": "cakes",
     "name": "レアチーズケーキ",
     "price": 550,
-    "image": "/product-images/04_cakes.png"
+    "image": "product-images/04_cakes.png"
   },
   {
     "id": 5,
     "category": "cakes",
     "name": "マロンのモンブラン",
     "price": 650,
-    "image": "/product-images/05_cakes.png"
+    "image": "product-images/05_cakes.png"
   },
   {
     "id": 6,
     "category": "cakes",
     "name": "濃厚ティラミス",
     "price": 600,
-    "image": "/product-images/06_cakes.png"
+    "image": "product-images/06_cakes.png"
   },
   {
     "id": 7,
     "category": "baked-goods",
     "name": "発酵バターのフィナンシェ",
     "price": 280,
-    "image": "/product-images/07_baked-goods.png"
+    "image": "product-images/07_baked-goods.png"
   },
   {
     "id": 8,
     "category": "baked-goods",
     "name": "アーモンドマドレーヌ",
     "price": 260,
-    "image": "/product-images/08_baked-goods.png"
+    "image": "product-images/08_baked-goods.png"
   },
   {
     "id": 9,
     "category": "baked-goods",
     "name": "ショコラブラウニー",
     "price": 320,
-    "image": "/product-images/09_baked-goods.png"
+    "image": "product-images/09_baked-goods.png"
   },
   {
     "id": 10,
     "category": "baked-goods",
     "name": "紅茶のパウンドケーキ",
     "price": 480,
-    "image": "/product-images/10_baked-goods.png"
+    "image": "product-images/10_baked-goods.png"
   },
   {
     "id": 11,
     "category": "baked-goods",
     "name": "爽やかレモンのパウンドケーキ",
     "price": 480,
-    "image": "/product-images/11_baked-goods.png"
+    "image": "product-images/11_baked-goods.png"
   },
   {
     "id": 12,
     "category": "baked-goods",
     "name": "抹茶のガレット・ブルトンヌ",
     "price": 380,
-    "image": "/product-images/12_baked-goods.png"
+    "image": "product-images/12_baked-goods.png"
   },
   {
     "id": 13,
     "category": "cookies",
     "name": "バニラサブレ",
     "price": 450,
-    "image": "/product-images/13_cookies.png"
+    "image": "product-images/13_cookies.png"
   },
   {
     "id": 14,
     "category": "cookies",
     "name": "チョコチップクッキー",
     "price": 480,
-    "image": "/product-images/14_cookies.png"
+    "image": "product-images/14_cookies.png"
   },
   {
     "id": 15,
     "category": "cookies",
     "name": "アールグレイクッキー",
     "price": 500,
-    "image": "/product-images/15_cookies.png"
+    "image": "product-images/15_cookies.png"
   },
   {
     "id": 16,
     "category": "cookies",
     "name": "塩バタークッキー",
     "price": 420,
-    "image": "/product-images/16_cookies.png"
+    "image": "product-images/16_cookies.png"
   },
   {
     "id": 17,
     "category": "cookies",
     "name": "3種ベリーのサブレ",
     "price": 470,
-    "image": "/product-images/17_cookies.png"
+    "image": "product-images/17_cookies.png"
   },
   {
     "id": 18,
     "category": "cookies",
     "name": "ピスタチオクッキー",
     "price": 520,
-    "image": "/product-images/18_cookies.png"
+    "image": "product-images/18_cookies.png"
   },
   {
     "id": 19,
     "category": "tarts",
     "name": "季節のフルーツタルト",
     "price": 680,
-    "image": "/product-images/19_tarts.png"
+    "image": "product-images/19_tarts.png"
   },
   {
     "id": 20,
     "category": "tarts",
     "name": "キャラメルナッツタルト",
     "price": 650,
-    "image": "/product-images/20_tarts.png"
+    "image": "product-images/20_tarts.png"
   },
   {
     "id": 21,
     "category": "tarts",
     "name": "濃厚チョコレートタルト",
     "price": 670,
-    "image": "/product-images/21_tarts.png"
+    "image": "product-images/21_tarts.png"
   },
   {
     "id": 22,
     "category": "tarts",
     "name": "レモンチーズタルト",
     "price": 620,
-    "image": "/product-images/22_tarts.png"
+    "image": "product-images/22_tarts.png"
   },
   {
     "id": 23,
     "category": "tarts",
     "name": "抹茶クリームと苺のタルト",
     "price": 690,
-    "image": "/product-images/23_tarts.png"
+    "image": "product-images/23_tarts.png"
   },
   {
     "id": 24,
