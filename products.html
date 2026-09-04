@@ -151,7 +151,7 @@
         React.useEffect(() => {
           const getProducts = async () => {
             try {
-              const response = await fetch('/products.json');
+              const response = await fetch('./products.json');
               const productsData = await response.json();
               setProducts(productsData);
               setCounts(Object.fromEntries(productsData.map((product) => [product.id, 0])));

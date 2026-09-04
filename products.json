@@ -80,73 +80,85 @@
     "id": 12,
     "category": "baked-goods",
     "name": "抹茶のガレット・ブルトンヌ",
-    "price": 380
+    "price": 380,
+    "image": "/product-images/12_baked-goods.png"
   },
   {
     "id": 13,
     "category": "cookies",
     "name": "バニラサブレ",
-    "price": 450
+    "price": 450,
+    "image": "/product-images/13_cookies.png"
   },
   {
     "id": 14,
     "category": "cookies",
     "name": "チョコチップクッキー",
-    "price": 480
+    "price": 480,
+    "image": "/product-images/14_cookies.png"
   },
   {
     "id": 15,
     "category": "cookies",
     "name": "アールグレイクッキー",
-    "price": 500
+    "price": 500,
+    "image": "/product-images/15_cookies.png"
   },
   {
     "id": 16,
     "category": "cookies",
     "name": "塩バタークッキー",
-    "price": 420
+    "price": 420,
+    "image": "/product-images/16_cookies.png"
   },
   {
     "id": 17,
     "category": "cookies",
     "name": "3種ベリーのサブレ",
-    "price": 470
+    "price": 470,
+    "image": "/product-images/17_cookies.png"
   },
   {
     "id": 18,
     "category": "cookies",
     "name": "ピスタチオクッキー",
-    "price": 520
+    "price": 520,
+    "image": "/product-images/18_cookies.png"
   },
   {
     "id": 19,
     "category": "tarts",
     "name": "季節のフルーツタルト",
-    "price": 680
+    "price": 680,
+    "image": "/product-images/19_tarts.png"
   },
   {
     "id": 20,
     "category": "tarts",
     "name": "キャラメルナッツタルト",
-    "price": 650
+    "price": 650,
+    "image": "/product-images/20_tarts.png"
   },
   {
     "id": 21,
     "category": "tarts",
     "name": "濃厚チョコレートタルト",
-    "price": 670
+    "price": 670,
+    "image": "/product-images/21_tarts.png"
   },
   {
     "id": 22,
     "category": "tarts",
-    "name": "レモンタルト",
-    "price": 620
+    "name": "レモンチーズタルト",
+    "price": 620,
+    "image": "/product-images/22_tarts.png"
   },
   {
     "id": 23,
     "category": "tarts",
     "name": "抹茶クリームと苺のタルト",
-    "price": 690
+    "price": 690,
+    "image": "/product-images/23_tarts.png"
   },
   {
     "id": 24,
