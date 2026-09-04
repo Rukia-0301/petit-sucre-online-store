@@ -33,6 +33,14 @@ img {
   height: auto;
 }
 
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus {
+  outline: none;
+}
+
 .logo {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
