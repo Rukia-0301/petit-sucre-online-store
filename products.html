@@ -200,12 +200,15 @@
           );
         }, [counts]);
 
+        const searchFormInputRef = React.useRef(null);
+
         const handleSearchFormSubmit = (e) => {
           e.preventDefault();
           setSelectCategory('');
           setFilterdSearchProducts(products.filter((product) => {
             return product.name.includes(searchText);
           }));
+          searchFormInputRef.current?.blur();
         };
 
         const handleSearchTextChange = (e) => {
@@ -280,7 +283,7 @@
             <main>
               <div className="container">
                 <form onSubmit={handleSearchFormSubmit} className="search-form">
-                  <input type="text" onChange={handleSearchTextChange} value={searchText} placeholder="商品名で検索" />
+                  <input type="text" onChange={handleSearchTextChange} value={searchText} placeholder="商品名で検索" ref={searchFormInputRef} />
                   <button>検索</button>
                 </form>
                 <div className="select-category">
