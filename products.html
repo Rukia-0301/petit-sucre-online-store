@@ -213,6 +213,9 @@
 
         const handleSearchTextChange = (e) => {
           setSearchText(e.currentTarget.value);
+          if (e.currentTarget.value === '') {
+            setFilterdSearchProducts(products);
+          }
         }
 
         const handleSelectCategoryChange = (e) => {
