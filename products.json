@@ -164,48 +164,56 @@
     "id": 24,
     "category": "tarts",
     "name": "アップルシナモンタルト",
-    "price": 640
+    "price": 640,
+    "image": "product-images/24_tarts.png"
   },
   {
     "id": 25,
     "category": "macarons",
     "name": "桜のマカロン",
-    "price": 420
+    "price": 420,
+    "image": "product-images/25_macarons.png"
   },
   {
     "id": 26,
     "category": "macarons",
     "name": "アールグレイのマカロン",
-    "price": 440
+    "price": 440,
+    "image": "product-images/26_macarons.png"
   },
   {
     "id": 27,
     "category": "macarons",
-    "name": "抹茶マカロン",
-    "price": 440
+    "name": "抹茶のマカロン",
+    "price": 440,
+    "image": "product-images/27_macarons.png"
   },
   {
     "id": 28,
     "category": "macarons",
     "name": "ホワイトチョコレートのマカロン",
-    "price": 420
+    "price": 420,
+    "image": "product-images/28_macarons.png"
   },
   {
     "id": 29,
     "category": "macarons",
-    "name": "バナナキャラメルマカロン",
-    "price": 450
+    "name": "チョコレート＆バナナのマカロン",
+    "price": 450,
+    "image": "product-images/29_macarons.png"
   },
   {
     "id": 30,
     "category": "macarons",
     "name": "白あんと苺のマカロン",
-    "price": 460
+    "price": 460,
+    "image": "product-images/30_macarons.png"
   },
   {
     "id": 31,
     "category": "macarons",
-    "name": "ピスタチオマカロン",
-    "price": 470
+    "name": "ピスタチオのマカロン",
+    "price": 470,
+    "image": "product-images/31_macarons.png"
   }
 ]

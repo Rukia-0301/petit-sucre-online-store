@@ -55,7 +55,7 @@
                   <button>+</button>
                 </div>
                 <button class="count-reset">
-                  <img src="icons/trash_big.svg">
+                  <img src="icons/trash.svg">
                 </button>
               </div>
             </div>
@@ -120,24 +120,36 @@
       };
 
       const ProductCard = (props) => {
+        const addCartBtn = (
+          <div className="products__btn">
+            <button className="add-cart">カートに追加</button>
+          </div>
+        );
+
+        const counterBtn = (
+          <div className="products__btn select-count">
+            <div className="flex">
+              <button>−</button>
+              <span>{props.count}</span>
+              <button>+</button>
+            </div>
+            <button className="count-reset">
+              <img src="icons/trash.svg" />
+            </button>
+          </div>
+        );
+
         return (
           <div className="products__card">
             <div>
               <img src={props.image} alt="" />
             </div>
             <div>
-              <p>{props.name}</p>
-              <p>{props.price}円</p>
-              <div className="products__btn select-count">
-                <div className="flex">
-                  <button>−</button>
-                  <span>{props.count}</span>
-                  <button>+</button>
-                </div>
-                <button className="count-reset">
-                  <img src="icons/trash_big.svg" />
-                </button>
-              </div>
+              <p >{props.name}</p>
+              <p>￥{Number(props.price).toLocaleString()}</p>
+              {
+                props.count === 0 ? addCartBtn : counterBtn
+              }
             </div>
           </div>
         );
@@ -154,7 +166,7 @@
               const response = await fetch('./products.json');
               const productsData = await response.json();
               setProducts(productsData);
-              setCounts(Object.fromEntries(productsData.map((product) => [product.id, 0])));
+              setCounts(Object.fromEntries(productsData.map((product) => [product.id, 1])));
             } catch (err) {
               console.log('商品データの取得に失敗しました');
             }
@@ -209,18 +221,6 @@
                 </div>
                 <div className="products">
                   {productCards}
-                  <div className="products__card">
-                    <div>
-                      <div className="img">画像</div>
-                    </div>
-                    <div>
-                      <p>商品名</p>
-                      <p>1,450円</p>
-                      <div className="products__btn">
-                        <button className="add-cart">カートに追加</button>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </main>
