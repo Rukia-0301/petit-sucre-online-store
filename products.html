@@ -297,7 +297,10 @@
                   </select>
                 </div>
                 <div className="products">
-                  {productCards}
+                  {
+                    productCards.length !== 0 ? productCards :
+                      <p className="undefined-products-message">商品が見つかりませんでした</p>
+                  }
                 </div>
               </div>
             </main>

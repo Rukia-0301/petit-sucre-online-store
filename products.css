@@ -253,6 +253,11 @@ main {
   height: 35px;
 }
 
+.undefined-products-message {
+  grid-column: 2;
+  text-align: center;
+}
+
 /* フッター */
 .footer {
   flex-shrink: 0;
