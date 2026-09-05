@@ -104,36 +104,39 @@
         { "name": "焼き菓子", "className": "baked-goods" }
       ];
 
-      const SearchForm = (props) => {
-        return (
-          <form className="search-form">
-            <input type="text" placeholder="商品名で検索" />
-            <button>検索</button>
-          </form>
-        );
-      };
-
       const SelectOption = (props) => {
         return (
-          <option value={props.className}>{props.name}</option>
+          <option value={props.category}>{props.name}</option>
         );
       };
 
       const ProductCard = (props) => {
+        const decrementCount = () => {
+          props.onDecrement(props.product.id);
+        };
+
+        const incrementCount = () => {
+          props.onIncrement(props.product.id);
+        };
+
+        const handleResetCount = () => {
+          props.onReset(props.product);
+        };
+
         const addCartBtn = (
           <div className="products__btn">
-            <button className="add-cart">カートに追加</button>
+            <button onClick={incrementCount} className="add-cart">カートに追加</button>
           </div>
         );
 
         const counterBtn = (
           <div className="products__btn select-count">
             <div className="flex">
-              <button>−</button>
+              <button onClick={decrementCount}>−</button>
               <span>{props.count}</span>
-              <button>+</button>
+              <button onClick={incrementCount}>+</button>
             </div>
-            <button className="count-reset">
+            <button onClick={handleResetCount} className="count-reset">
               <img src="icons/trash.svg" />
             </button>
           </div>
@@ -142,15 +145,13 @@
         return (
           <div className="products__card">
             <div>
-              <img src={props.image} alt="" />
+              <img src={props.product.image} alt="" />
             </div>
-            <div>
-              <p >{props.name}</p>
-              <p>￥{Number(props.price).toLocaleString()}</p>
-              {
-                props.count === 0 ? addCartBtn : counterBtn
-              }
-            </div>
+            <p className="product-name">{props.product.name}</p>
+            <p>￥{Number(props.product.price).toLocaleString()}</p>
+            {
+              props.count === 0 ? addCartBtn : counterBtn
+            }
           </div>
         );
       };
@@ -158,7 +159,15 @@
       const App = () => {
         const [counts, setCounts] = React.useState({});
 
+        const [total, setTotal] = React.useState(0);
+
         const [products, setProducts] = React.useState([]);
+
+        const [searchText, setSearchText] = React.useState('');
+
+        const [filterdSearchProducts, setFilterdSearchProducts] = React.useState([]);
+
+        const [selectCategory, setSelectCategory] = React.useState('');
 
         React.useEffect(() => {
           const getProducts = async () => {
@@ -166,13 +175,71 @@
               const response = await fetch('./products.json');
               const productsData = await response.json();
               setProducts(productsData);
-              setCounts(Object.fromEntries(productsData.map((product) => [product.id, 1])));
+              setFilterdSearchProducts(productsData);
+              if (localStorage.getItem('counts') === null) {
+                setCounts(Object.fromEntries(productsData.map((product) => [product.id, 0])));
+              } else {
+                setCounts(JSON.parse(localStorage.getItem('counts')));
+              }
             } catch (err) {
               console.log('商品データの取得に失敗しました');
             }
           };
           getProducts();
         }, []);
+
+        React.useEffect(() => {
+          if (Object.keys(counts).length === 0) {
+            return;
+          }
+          localStorage.setItem('counts', JSON.stringify(counts));
+          setTotal(
+            Object.values(counts).reduce((result, count) => {
+              return result + count;
+            }, 0)
+          );
+        }, [counts]);
+
+        const handleSearchFormSubmit = (e) => {
+          e.preventDefault();
+          setSelectCategory('');
+          setFilterdSearchProducts(products.filter((product) => {
+            return product.name.includes(searchText);
+          }));
+        };
+
+        const handleSearchTextChange = (e) => {
+          setSearchText(e.currentTarget.value);
+        }
+
+        const handleSelectCategoryChange = (e) => {
+          setSearchText('');
+          setFilterdSearchProducts(products);
+          const selectedCategory = e.currentTarget.value;
+          setSelectCategory(selectedCategory);
+        };
+
+        const decrementProductCount = (id) => {
+          setCounts({ ...counts, [id]: counts[id] - 1 });
+        };
+
+        const incrementProductCount = (id) => {
+          setCounts({ ...counts, [id]: counts[id] + 1 });
+        };
+
+        const ResetProductCount = (product) => {
+          if (!confirm(product.name + 'をカートから削除しますか？')) {
+            return;
+          }
+          setCounts({ ...counts, [product.id]: 0 });
+        };
+
+        const filterdProducts = filterdSearchProducts.filter((product) => {
+          if (selectCategory === '') {
+            return true;
+          }
+          return product.category === selectCategory;
+        });
 
         const categoryItems = categories.map((category) => {
           return (
@@ -184,25 +251,26 @@
           );
         });
 
-        const productCards = products.map((product) => {
+        const productCards = filterdProducts.map((product) => {
           return (
             <ProductCard
               key={product.id}
-              image={product.image}
-              name={product.name}
-              category={product.category}
-              price={product.price}
+              product={product}
               count={counts[product.id]}
+              onDecrement={decrementProductCount}
+              onIncrement={incrementProductCount}
+              onReset={ResetProductCount}
             />
           );
         });
+
         return (
           <>
             <header className="header">
               <h1><a href="#" className="logo">Petit Sucre</a></h1>
               <button className="cart">
-                <img src="icons/cart.svg" alt="ショッピングカート" />
-                <span className="cart__total">2</span>
+                <img src="icons/cart.svg" alt="カート" />
+                <span className="cart__total">{total}</span>
               </button>
               <div className="sp-hamburger">
                 <span className="line"></span>
@@ -211,11 +279,14 @@
             </header>
             <main>
               <div className="container">
-                <SearchForm />
+                <form onSubmit={handleSearchFormSubmit} className="search-form">
+                  <input type="text" onChange={handleSearchTextChange} value={searchText} placeholder="商品名で検索" />
+                  <button>検索</button>
+                </form>
                 <div className="select-category">
                   <p>絞り込み：</p>
-                  <select>
-                    <option value="all">すべて</option>
+                  <select onChange={handleSelectCategoryChange} value={selectCategory}>
+                    <option value="">すべて</option>
                     {categoryItems}
                   </select>
                 </div>
