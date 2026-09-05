@@ -3,6 +3,7 @@
     "id": 1,
     "category": "cakes",
     "name": "苺のショートケーキ",
+    "kana": "いちごのしょーとけーき",
     "price": 580,
     "image": "product-images/01_cakes.png"
   },
@@ -10,6 +11,7 @@
     "id": 2,
     "category": "cakes",
     "name": "濃厚ガトーショコラ",
+    "kana": "のうこうがとーしょこら",
     "price": 620,
     "image": "product-images/02_cakes.png"
   },
@@ -17,6 +19,7 @@
     "id": 3,
     "category": "cakes",
     "name": "ベイクドチーズケーキ",
+    "kana": "べいくどちーずけーき",
     "price": 600,
     "image": "product-images/03_cakes.png"
   },
@@ -24,6 +27,7 @@
     "id": 4,
     "category": "cakes",
     "name": "レアチーズケーキ",
+    "kana": "れあちーずけーき",
     "price": 550,
     "image": "product-images/04_cakes.png"
   },
@@ -31,6 +35,7 @@
     "id": 5,
     "category": "cakes",
     "name": "マロンのモンブラン",
+    "kana": "まろんのもんぶらん",
     "price": 650,
     "image": "product-images/05_cakes.png"
   },
@@ -38,6 +43,7 @@
     "id": 6,
     "category": "cakes",
     "name": "濃厚ティラミス",
+    "kana": "のうこうてぃらみす",
     "price": 600,
     "image": "product-images/06_cakes.png"
   },
@@ -45,6 +51,7 @@
     "id": 7,
     "category": "baked-goods",
     "name": "発酵バターのフィナンシェ",
+    "kana": "はっこうばたーのふぃなんしぇ",
     "price": 280,
     "image": "product-images/07_baked-goods.png"
   },
@@ -52,6 +59,7 @@
     "id": 8,
     "category": "baked-goods",
     "name": "アーモンドマドレーヌ",
+    "kana": "あーもんどまどれーぬ",
     "price": 260,
     "image": "product-images/08_baked-goods.png"
   },
@@ -59,6 +67,7 @@
     "id": 9,
     "category": "baked-goods",
     "name": "ショコラブラウニー",
+    "kana": "しょこらぶらうにー",
     "price": 320,
     "image": "product-images/09_baked-goods.png"
   },
@@ -66,6 +75,7 @@
     "id": 10,
     "category": "baked-goods",
     "name": "紅茶のパウンドケーキ",
+    "kana": "こうちゃのぱうんどけーき",
     "price": 480,
     "image": "product-images/10_baked-goods.png"
   },
@@ -73,6 +83,7 @@
     "id": 11,
     "category": "baked-goods",
     "name": "爽やかレモンのパウンドケーキ",
+    "kana": "さわやかれもんのぱうんどけーき",
     "price": 480,
     "image": "product-images/11_baked-goods.png"
   },
@@ -80,6 +91,7 @@
     "id": 12,
     "category": "baked-goods",
     "name": "抹茶のガレット・ブルトンヌ",
+    "kana": "まっちゃのがれっと・ぶるとんぬ",
     "price": 380,
     "image": "product-images/12_baked-goods.png"
   },
@@ -87,6 +99,7 @@
     "id": 13,
     "category": "cookies",
     "name": "バニラサブレ",
+    "kana": "ばにらさぶれ",
     "price": 450,
     "image": "product-images/13_cookies.png"
   },
@@ -94,6 +107,7 @@
     "id": 14,
     "category": "cookies",
     "name": "チョコチップクッキー",
+    "kana": "ちょこちっぷくっきー",
     "price": 480,
     "image": "product-images/14_cookies.png"
   },
@@ -101,6 +115,7 @@
     "id": 15,
     "category": "cookies",
     "name": "アールグレイクッキー",
+    "kana": "あーるぐれいくっきー",
     "price": 500,
     "image": "product-images/15_cookies.png"
   },
@@ -108,6 +123,7 @@
     "id": 16,
     "category": "cookies",
     "name": "塩バタークッキー",
+    "kana": "しおばたーくっきー",
     "price": 420,
     "image": "product-images/16_cookies.png"
   },
@@ -115,6 +131,7 @@
     "id": 17,
     "category": "cookies",
     "name": "3種ベリーのサブレ",
+    "kana": "さんしゅべりーのさぶれ",
     "price": 470,
     "image": "product-images/17_cookies.png"
   },
@@ -122,6 +139,7 @@
     "id": 18,
     "category": "cookies",
     "name": "ピスタチオクッキー",
+    "kana": "ぴすたちおくっきー",
     "price": 520,
     "image": "product-images/18_cookies.png"
   },
@@ -129,6 +147,7 @@
     "id": 19,
     "category": "tarts",
     "name": "季節のフルーツタルト",
+    "kana": "きせつのふるーつたると",
     "price": 680,
     "image": "product-images/19_tarts.png"
   },
@@ -136,6 +155,7 @@
     "id": 20,
     "category": "tarts",
     "name": "キャラメルナッツタルト",
+    "kana": "きゃらめるなっつたると",
     "price": 650,
     "image": "product-images/20_tarts.png"
   },
@@ -143,6 +163,7 @@
     "id": 21,
     "category": "tarts",
     "name": "濃厚チョコレートタルト",
+    "kana": "のうこうちょこれーとたると",
     "price": 670,
     "image": "product-images/21_tarts.png"
   },
@@ -150,6 +171,7 @@
     "id": 22,
     "category": "tarts",
     "name": "レモンチーズタルト",
+    "kana": "れもんちーずたると",
     "price": 620,
     "image": "product-images/22_tarts.png"
   },
@@ -157,6 +179,7 @@
     "id": 23,
     "category": "tarts",
     "name": "抹茶クリームと苺のタルト",
+    "kana": "まっちゃくりーむといちごのたると",
     "price": 690,
     "image": "product-images/23_tarts.png"
   },
@@ -164,6 +187,7 @@
     "id": 24,
     "category": "tarts",
     "name": "アップルシナモンタルト",
+    "kana": "あっぷるしなもんたると",
     "price": 640,
     "image": "product-images/24_tarts.png"
   },
@@ -171,6 +195,7 @@
     "id": 25,
     "category": "macarons",
     "name": "桜のマカロン",
+    "kana": "さくらのまかろん",
     "price": 420,
     "image": "product-images/25_macarons.png"
   },
@@ -178,6 +203,7 @@
     "id": 26,
     "category": "macarons",
     "name": "アールグレイのマカロン",
+    "kana": "あーるぐれいのまかろん",
     "price": 440,
     "image": "product-images/26_macarons.png"
   },
@@ -185,6 +211,7 @@
     "id": 27,
     "category": "macarons",
     "name": "抹茶のマカロン",
+    "kana": "まっちゃのまかろん",
     "price": 440,
     "image": "product-images/27_macarons.png"
   },
@@ -192,6 +219,7 @@
     "id": 28,
     "category": "macarons",
     "name": "ホワイトチョコレートのマカロン",
+    "kana": "ほわいとちょこれーとのまかろん",
     "price": 420,
     "image": "product-images/28_macarons.png"
   },
@@ -199,6 +227,7 @@
     "id": 29,
     "category": "macarons",
     "name": "チョコレート＆バナナのマカロン",
+    "kana": "ちょこれーとあんどばななのまかろん",
     "price": 450,
     "image": "product-images/29_macarons.png"
   },
@@ -206,6 +235,7 @@
     "id": 30,
     "category": "macarons",
     "name": "白あんと苺のマカロン",
+    "kana": "しろあんといちごのまかろん",
     "price": 460,
     "image": "product-images/30_macarons.png"
   },
@@ -213,6 +243,7 @@
     "id": 31,
     "category": "macarons",
     "name": "ピスタチオのマカロン",
+    "kana": "ぴすたちおのまかろん",
     "price": 470,
     "image": "product-images/31_macarons.png"
   }

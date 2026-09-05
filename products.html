@@ -206,7 +206,7 @@
           e.preventDefault();
           setSelectCategory('');
           setFilterdSearchProducts(products.filter((product) => {
-            return product.name.includes(searchText);
+            return product.name.includes(searchText) || product.kana.includes(searchText);
           }));
           searchFormInputRef.current?.blur();
         };
