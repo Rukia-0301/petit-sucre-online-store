@@ -102,7 +102,7 @@
             <div>
               <img src={props.product.image} alt="" />
             </div>
-            <p className="product-name">{props.product.name}</p>
+            <h2 className="product-name">{props.product.name}</h2>
             <p>￥{Number(props.product.price).toLocaleString()}</p>
             {
               props.count === 0 ? addCartBtn : counterBtn

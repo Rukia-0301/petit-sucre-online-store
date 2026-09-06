@@ -181,8 +181,10 @@ main {
   flex-direction: column;
 }
 
-.products__card .product-name{
+.product-name{
   flex: 1;
+  font-size: 14px;
+  margin: 6px 0;
 }
 
 .products__card p {
@@ -199,7 +201,7 @@ main {
   width: 100%;
   text-align: center;
   font-size: 14px;
-  height: 37px;
+  height: 35px;
   border-radius: 50px;
   color: #fff;
   background: #333;
@@ -279,6 +281,15 @@ main {
   margin-top: 20px;
 }
 
+@media (max-width: 374px) {
+  .container {
+    padding: 0 5%;
+  }
+  .products {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (min-width: 650px) {
   body {
     font-size: 16px;
@@ -347,7 +358,8 @@ main {
     gap: 60px 2%;
   }
 
-  .products p {
+  .product-name,
+  .products__card p {
     font-size: 18px;
     margin: 12px 0;
   }
