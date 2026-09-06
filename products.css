@@ -181,7 +181,7 @@ main {
   flex-direction: column;
 }
 
-.product-name{
+.product-name {
   flex: 1;
   font-size: 14px;
   margin: 6px 0;
@@ -406,6 +406,7 @@ main {
 @media (min-width: 1500px) {
   /* 商品一覧 */
 
+  .product-name,
   .products__card p {
     font-size: 20px;
   }
