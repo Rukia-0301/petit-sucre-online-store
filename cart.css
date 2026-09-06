@@ -104,24 +104,105 @@ main {
   padding-top: 50px;
 }
 .container {
-  margin: 0 auto;
+  margin: 18px auto 30px;
   padding: 0 4%;
 }
 
-/* カート */
 .content-title {
   text-align: center;
-  margin: 18px 0;
+  margin-bottom: 18px;
 }
 
-/* カート内のアイテム */
-.cart-item__container {}
+/* カート内の各アイテム */
+.cart-item {
+  display: flex;
+  gap: 2%;
+  padding: 16px 0;
+  border-bottom: 1px solid #bbb;
+}
 
+.cart-item__image {
+  flex: 1;
+}
+
+.cart-item__details {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-item__info {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart-item__info p {
+  margin-top: 12px;
+}
+
+.cart-item__delete {
+  all: unset;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  padding: 4px 0;
+  cursor: pointer;
+}
+
+.cart-item__delete img {
+  flex-shrink: 0;
+  width: 25px;
+  height: 25px;
+}
+
+.cart-item__delete span {
+  flex-shrink: 0;
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.cart-item__counter {
+  flex-shrink: 0;
+  margin-top: auto;
+  padding-top: 12px;
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.cart-item__counter button {
+  all: unset;
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
+  color: #fff;
+  background: #333;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.cart-item__counter span {
+  min-width: 40px;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* 合計金額 */
+.total {
+  text-align: right;
+  margin: 18px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
 
 /* フッター */
 .footer {
   flex-shrink: 0;
-  margin-top: 32px;
   padding: 16px 4% 8px;
   background: #513A38;
 }
