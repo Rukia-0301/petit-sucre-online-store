@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>カート</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+  <div id="root">
+    <header class="header">
+      <h1><a href="#" class="logo">Petit Sucre</a></h1>
+      <a href="cart.html" class="cart-icon">
+        <img src="icons/cart.svg" alt="">
+        <span class="cart__total">0</span>
+      </a>
+      <div class="sp-hamburger">
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <h2 class="content-title">カート</h2>
+        <div class="cart-items">
+          <div class="cart__item">
+            <div>
+              <img src="./product-images/01_cakes.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <a href="#" class="logo">Petit Sucre</a>
+      <small>&copy; Petit Sucre</small>
+    </footer>
+  </div>
+</body>
+</html>

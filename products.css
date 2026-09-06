@@ -49,6 +49,7 @@ button:focus {
   align-items: center;
   background: rgba(255, 255, 255, .5);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   padding-left: 12px;
   box-shadow: 0 0 4px 0px rgba(0, 0, 0, .35);
 }
@@ -59,7 +60,7 @@ button:focus {
   line-height: 50px;
 }
 
-.cart {
+.cart-icon {
   all: unset;
   width: 40px;
   line-height: 50px;
@@ -235,7 +236,6 @@ main {
 }
 
 .select-count span {
-  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
   text-align: center;
   font-size: 20px;
   width: 30px;
@@ -254,7 +254,7 @@ main {
 }
 
 .undefined-products-message {
-  grid-column: 2;
+  grid-column: 1 / -1;
   text-align: center;
 }
 
@@ -293,7 +293,7 @@ main {
     line-height: 70px;
   }
 
-  .cart {
+  .cart-icon {
     width: 60px;
     line-height: 70px;
     margin-right: 16px;

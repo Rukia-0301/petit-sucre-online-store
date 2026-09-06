@@ -15,10 +15,10 @@
   <div id="root">
     <header class="header">
       <h1><a href="#" class="logo">Petit Sucre</a></h1>
-      <button class="cart">
+      <a href="cart.html" class="cart-icon">
         <img src="icons/cart.svg" alt="">
-        <span class="cart__total">2</span>
-      </button>
+        <span class="cart__total">0</span>
+      </a>
       <div class="sp-hamburger">
         <span class="line"></span>
         <span class="line"></span>
@@ -39,51 +39,6 @@
             <option value="all">クッキー</option>
             <option value="all">焼き菓子</option>
           </select>
-        </div>
-        <div class="products">
-          <div class="products__card">
-            <div>
-              <div class="img">画像</div>
-            </div>
-            <div>
-              <p>商品名</p>
-              <p>450円</p>
-              <div class="products__btn select-count">
-                <div class="flex">
-                  <button>−</button>
-                  <span>1</span>
-                  <button>+</button>
-                </div>
-                <button class="count-reset">
-                  <img src="icons/trash.svg">
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="products__card">
-            <div>
-              <div class="img">画像</div>
-            </div>
-            <div>
-              <p>商品名</p>
-              <p>1,450円</p>
-              <div class="products__btn">
-                <button class="add-cart">カートに追加</button>
-              </div>
-            </div>
-          </div>
-          <div class="products__card">
-            <div>
-              <div class="img">画像</div>
-            </div>
-            <div>
-              <p>商品名</p>
-              <p>450円</p>
-              <div class="products__btn">
-                <button class="add-cart">カートに追加</button>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </main>
@@ -274,10 +229,10 @@
           <>
             <header className="header">
               <h1><a href="#" className="logo">Petit Sucre</a></h1>
-              <button className="cart">
+              <a href="cart.html" className="cart-icon">
                 <img src="icons/cart.svg" alt="カート" />
                 <span className="cart__total">{total}</span>
-              </button>
+              </a>
               <div className="sp-hamburger">
                 <span className="line"></span>
                 <span className="line"></span>
