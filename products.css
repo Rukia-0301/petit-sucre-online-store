@@ -87,7 +87,7 @@ button:focus {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  padding: 18px 10px;
+  padding: 19px 10px;
   cursor: pointer;
 }
 
@@ -279,6 +279,28 @@ main {
 }
 
 @media (max-width: 374px) {
+  .header {
+    padding-left: 8px;
+  }
+  .header .logo {
+    font-size: 18px;
+    line-height: 45px;
+  }
+  .cart-icon {
+    width: 35px;
+    line-height: 45px;
+  }
+  .cart__total {
+    width: 16px;
+    line-height: 16px;
+    font-size: 9px;
+  }
+  .sp-hamburger {
+    padding: 16.5px 8px;
+  }
+  .sp-hamburger .line {
+    width: 25px;
+  }
   .container {
     padding: 0 5%;
   }

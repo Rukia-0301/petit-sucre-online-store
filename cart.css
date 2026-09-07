@@ -87,7 +87,7 @@ button:focus {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  padding: 18px 10px;
+  padding: 19px 10px;
   cursor: pointer;
 }
 
@@ -110,6 +110,7 @@ main {
 
 .content-title {
   text-align: center;
+  font-size: 18px;
   margin-bottom: 18px;
 }
 
@@ -134,12 +135,21 @@ main {
 .cart-item__info {
   flex-shrink: 0;
   display: flex;
+  gap: 8px;
   align-items: center;
   justify-content: space-between;
 }
 
+.cart-item__info h3 {
+  font-size: 16px;
+}
+
 .cart-item__info p {
   margin-top: 12px;
+}
+
+.cart-item__delete-area {
+  flex-shrink: 0;
 }
 
 .cart-item__delete {
@@ -168,7 +178,7 @@ main {
 .cart-item__counter {
   flex-shrink: 0;
   margin-top: auto;
-  padding-top: 12px;
+  padding-top: 16px;
   display: flex;
   gap: 16px;
   justify-content: flex-end;
@@ -193,11 +203,28 @@ main {
 }
 
 /* 合計金額 */
-.total {
+.cart-items__total {
   text-align: right;
   margin: 18px 0;
   font-size: 18px;
   font-weight: bold;
+}
+
+/* 購入ボタン */
+.cart-items__checkout {
+  display: block;
+  height: 45px;
+  padding: 0 65px;
+  margin-inline: auto;
+  background: #333;
+  color: #fff;
+  font-size: 14px;
+  border: none;
+  transition: background-color .3s;
+}
+
+.cart-items__checkout:hover {
+  background: var(--accent-color);
 }
 
 /* フッター */

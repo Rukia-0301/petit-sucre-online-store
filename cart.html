@@ -27,7 +27,7 @@
     <main>
       <div class="container">
         <h2 class="content-title">カート</h2>
-        <form action="https://formspree.io/f/mgaelyyp" method="post">
+        <!-- <form action="https://formspree.io/f/mgaelyyp" method="post">
           <ul class="cart-items">
             <li class="cart-item">
               <div class="cart-item__image">
@@ -39,8 +39,9 @@
                     <h3>苺のショートケーキ</h3>
                     <p>￥1,160 (￥580 × 2個)</p>
                   </div>
-                  <div>
-                    <button type="button" class="cart-item__delete"><img src="icons/delete.svg" alt=""><span>削除</span></button>
+                  <div class="cart-item__delete-area">
+                    <button type="button" class="cart-item__delete"><img src="icons/delete.svg"
+                        alt=""><span>削除</span></button>
                   </div>
                 </div>
                 <div class="cart-item__counter">
@@ -49,38 +50,190 @@
                   <button type="button">＋</button>
                 </div>
               </div>
-            </li>
-            <li class="cart-item">
-              <div class="cart-item__image">
-                <img src="./product-images/01_cakes.png" alt="">
-              </div>
-              <div class="cart-item__details">
-                <div class="cart-item__info">
-                  <div>
-                    <h3>苺のショートケーキ</h3>
-                    <p>￥1,160 (￥580 × 2個)</p>
-                  </div>
-                  <div>
-                    <button type="button" class="cart-item__delete"><img src="icons/delete.svg" alt=""><span>削除</span></button>
-                  </div>
-                </div>
-                <div class="cart-item__counter">
-                  <button type="button">－</button>
-                  <span>0</span>
-                  <button type="button">＋</button>
-                </div>
-              </div>
+
+              <input type="hidden" name="product_id_id_name" value="product.name" />
+              <input type="hidden" name="product_id_id_price" value="product.price" />
+              <input type="hidden" name="product_id_id_quantity" value="product.count" />
             </li>
           </ul>
-          <p class="total">合計： 2,320円</p>
-          <button type="submit" class="cart-items__checkout"></button>
-        </form>
+          <p class="cart-items__total">合計： 2,320円</p>
+          <button type="submit" class="cart-items__checkout">購入を確定</button>
+        </form> -->
       </div>
     </main>
     <footer class="footer">
       <a href="#" class="logo">Petit Sucre</a>
       <small>&copy; Petit Sucre</small>
     </footer>
+
+    <script type="text/babel">
+      'use strict';
+      {
+        const CartItem = (props) => {
+          const decrementCount = () => {
+            props.onDecrement(props.product.id);
+          };
+          const incrementCount = () => {
+            props.onIncrement(props.product.id);
+          };
+
+          const handleDeleteItem = () => {
+            props.onDelete(props.product.id);
+          };
+
+          return (
+            <li className="cart-item">
+              <div className="cart-item__image">
+                <img src={props.product.image} alt="商品画像" />
+              </div>
+              <div className="cart-item__details">
+                <div className="cart-item__info">
+                  <div>
+                    <h3>{props.product.name}</h3>
+                    <p>￥{Number(props.product.price * props.count).toLocaleString()}　(￥{props.product.price} × {props.count}個)</p>
+                  </div>
+                  <div className="cart-item__delete-area">
+                    <button onClick={handleDeleteItem} type="button" className="cart-item__delete">
+                      <img src="icons/delete.svg" alt="削除ボタン" /><span>削除</span>
+                    </button>
+                  </div>
+                </div>
+                <div className="cart-item__counter">
+                  <button onClick={decrementCount} type="button">－</button>
+                  <span>{props.count}</span>
+                  <button onClick={incrementCount} type="button">＋</button>
+                </div>
+              </div>
+
+              <input
+                type="hidden"
+                name={`product_id_${props.product.id}_name`}
+                value={props.product.name}
+              />
+              <input
+                type="hidden"
+                name={`product_id_${props.product.id}_price`}
+                value={props.product.price}
+              />
+              <input
+                type="hidden"
+                name={`product_id_${props.product.id}_count`}
+                value={props.count}
+              />
+            </li>
+          );
+        };
+
+        const App = () => {
+          const [products, setProducts] = React.useState([]);
+
+          const [counts, setCounts] = React.useState({});
+
+          React.useEffect(() => {
+            const getProducts = async () => {
+              try {
+                const response = await fetch('./products.json');
+                const productsData = await response.json();
+                setProducts(productsData);
+              } catch (err) {
+                console.log('商品データの取得に失敗しました' + err);
+              }
+            };
+            getProducts();
+
+            if (localStorage.getItem('counts') !== null) {
+              setCounts(JSON.parse(localStorage.getItem('counts')));
+            }
+          }, []);
+
+          React.useEffect(() => {
+            localStorage.setItem('counts', JSON.stringify(counts));
+          }, [counts]);
+
+          const decrementProductCount = (id) => {
+            if (counts[id] === 0) {
+              return;
+            }
+            if (counts[id] === 1) {
+              if (!confirm(`${products.find((product) => product.id === id).name} をカートから削除しますか？`)) {
+                return;
+              }
+            }
+            setCounts({...counts, [id]: counts[id] - 1});
+          };
+
+          const incrementProductCount = (id) => {
+            if (counts[id] >= 99) {
+              return;
+            }
+            setCounts({...counts, [id]: counts[id] + 1});
+          };
+
+          const handleDeleteCartItem = (id) => {
+            if (!confirm(`${products.find((product) => product.id === id).name} をカートから削除しますか？`)) {
+              return;
+            }
+            setCounts({...counts, [id]: 0});
+          };
+
+          const selectedItems = products.filter((product) => {
+            return counts[product.id] > 0;
+          });
+
+          const cartItems = selectedItems.map((product) => {
+            return (
+              <CartItem
+                key={product.id}
+                product={product}
+                count={counts[product.id]}
+                onDecrement={decrementProductCount}
+                onIncrement={incrementProductCount}
+                onDelete={handleDeleteCartItem}
+              />
+            );
+          });
+
+          const totalAmount = selectedItems.reduce((result, product) => {
+            return result + product.price * counts[product.id];
+          }, 0);
+
+          return (
+            <>
+              <header className="header">
+                <h1><a href="#" className="logo">Petit Sucre</a></h1>
+                <a href="cart.html" className="cart-icon">
+                  <img src="icons/cart.svg" alt="カート" />
+                  <span className="cart__total">0</span>
+                </a>
+                <div className="sp-hamburger">
+                  <span className="line"></span>
+                  <span className="line"></span>
+                </div>
+              </header>
+              <main>
+                <div className="container">
+                  <h2 className="content-title">カート</h2>
+                  <form action="https://formspree.io/f/mgaelyyp" method="post">
+                    <ul className="cart-items">
+                      {cartItems}
+                    </ul>
+                    <p className="cart-items__total">合計： {Number(totalAmount).toLocaleString()}円</p>
+                    <button type="submit" className="cart-items__checkout">購入を確定</button>
+                  </form>
+                </div>
+              </main>
+              <footer className="footer">
+                <a href="#" className="logo">Petit Sucre</a>
+                <small>&copy; Petit Sucre</small>
+              </footer>
+            </>
+          );
+        };
+
+        const root = ReactDOM.createRoot(document.querySelector('#root'));
+        root.render(<App />);
+      }
+    </script>
   </div>
 </body>
 
