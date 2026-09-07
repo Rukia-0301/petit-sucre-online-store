@@ -202,6 +202,11 @@ main {
   text-align: center;
 }
 
+.no-item-message {
+  text-align: center;
+  margin: 40px 0 60px;
+}
+
 /* 合計金額 */
 .cart-items__total {
   text-align: right;
