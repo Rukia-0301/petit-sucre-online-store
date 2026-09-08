@@ -199,6 +199,15 @@
             return result + product.price * counts[product.id];
           }, 0);
 
+          const cartItemsReset = () => {
+            if (!confirm('購入を確定しますか？')) {
+              return;
+            }
+            setCounts(Object.fromEntries(products.map((product) => 
+              [product.id, 0])
+            ));
+          };
+
           return (
             <>
               <header className="header">
@@ -220,7 +229,7 @@
                   </ul>
                   <div className="cart-items__checkout-bar container">
                     <p className="cart-items__total">合計： {Number(totalAmount).toLocaleString()}円</p>
-                    <button type="submit" className="cart-items__checkout" disabled={Object.keys(selectedItems).length === 0 ? true : false}>購入を確定</button>
+                    <button type="submit" onClick={cartItemsReset} className="cart-items__checkout" disabled={Object.keys(selectedItems).length === 0 ? true : false}>購入を確定</button>
                     <a href="products.html">お買い物を続ける</a>
                   </div>
                 </form>
