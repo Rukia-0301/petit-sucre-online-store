@@ -223,9 +223,9 @@
                   <ul className="cart-items container">
                     {isLoading ? <p className="cart-items__message">読み込み中...</p> :
                       selectedItems.length === 0 ? noItemMessage :
-                        <>{cartItems} <p className="cart-items__message">すべての商品を表示しました</p></>}
+                        <>{cartItems} <li><p className="cart-items__message">すべての商品を表示しました</p></li></>}
                   </ul>
-                  <div className="cart-items__checkout-bar ">
+                  <div className="cart-items__checkout-bar">
                     <div className="container">
                       <p className="cart-items__total">合計： {Number(totalAmount).toLocaleString()}円</p>
                       <div className="pc-style__checkout-flex">
