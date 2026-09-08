@@ -61,10 +61,6 @@
         </form> -->
       </div>
     </main>
-    <footer class="footer">
-      <a href="#" class="logo">Petit Sucre</a>
-      <small>&copy; Petit Sucre</small>
-    </footer>
 
     <script type="text/babel">
       'use strict';
@@ -159,21 +155,21 @@
                 return;
               }
             }
-            setCounts({...counts, [id]: counts[id] - 1});
+            setCounts({ ...counts, [id]: counts[id] - 1 });
           };
 
           const incrementProductCount = (id) => {
             if (counts[id] >= 99) {
               return;
             }
-            setCounts({...counts, [id]: counts[id] + 1});
+            setCounts({ ...counts, [id]: counts[id] + 1 });
           };
 
           const handleDeleteCartItem = (id) => {
             if (!confirm(`${products.find((product) => product.id === id).name} をカートから削除しますか？`)) {
               return;
             }
-            setCounts({...counts, [id]: 0});
+            setCounts({ ...counts, [id]: 0 });
           };
 
           const selectedItems = products.filter((product) => {
@@ -217,21 +213,18 @@
                 </div>
               </header>
               <main>
-                <div className="container">
-                  <h2 className="content-title">カート</h2>
-                  <form action="https://formspree.io/f/mgaelyyp" method="post">
-                    <ul className="cart-items">
-                      {Object.keys(selectedItems).length === 0 ? noItemMessage : cartItems}
-                    </ul>
+                <h2 className="content-title">カート</h2>
+                <form action="https://formspree.io/f/mgaelyyp" method="post">
+                  <ul className="cart-items container">
+                    {Object.keys(selectedItems).length === 0 ? noItemMessage : cartItems}
+                  </ul>
+                  <div className="cart-items__checkout-bar container">
                     <p className="cart-items__total">合計： {Number(totalAmount).toLocaleString()}円</p>
-                    <button type="submit" className="cart-items__checkout">購入を確定</button>
-                  </form>
-                </div>
+                    <button type="submit" className="cart-items__checkout" disabled={Object.keys(selectedItems).length === 0 ? true : false}>購入を確定</button>
+                    <a href="products.html">お買い物を続ける</a>
+                  </div>
+                </form>
               </main>
-              <footer className="footer">
-                <a href="#" className="logo">Petit Sucre</a>
-                <small>&copy; Petit Sucre</small>
-              </footer>
             </>
           );
         };
