@@ -421,11 +421,21 @@ main {
   }
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1200px) {
+  /* main */
+  .container {
+    padding: 0 10%;
+  }
+
   /* 商品一覧 */
   .product-name,
   .products__card p {
     font-size: 20px;
+  }
+  
+  .products {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 60px 2%;
   }
 
   .add-cart,

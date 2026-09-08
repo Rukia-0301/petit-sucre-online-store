@@ -79,7 +79,8 @@ button:focus {
   position: absolute;
   top: 0;
   right: -5px;
-  background: rgb(255, 86, 80);;
+  background: rgb(255, 86, 80);
+  ;
   color: #fff;
 }
 
@@ -104,6 +105,7 @@ main {
   padding-top: 50px;
   padding-bottom: 200px;
 }
+
 .container {
   padding: 0 4%;
 }
@@ -141,7 +143,7 @@ main {
 }
 
 .cart-item__info h3 {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .cart-item__info p {
@@ -194,6 +196,7 @@ main {
   background: #333;
   border-radius: 50%;
   text-align: center;
+  cursor: pointer;
 }
 
 .cart-item__counter span {
@@ -202,9 +205,9 @@ main {
   text-align: center;
 }
 
-.no-item-message {
+.cart-items__message {
   text-align: center;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 /* 購入ボタンエリア */
@@ -261,22 +264,27 @@ main {
   .header {
     padding-left: 8px;
   }
+
   .header .logo {
     font-size: 18px;
     line-height: 45px;
   }
+
   .cart-icon {
     width: 35px;
     line-height: 45px;
   }
+
   .cart__total {
     width: 18px;
     line-height: 18px;
     font-size: 9px;
   }
+
   .sp-hamburger {
     padding: 16.5px 8px;
   }
+
   .sp-hamburger .line {
     width: 25px;
   }
@@ -292,15 +300,25 @@ main {
   }
 
   /* カート内アイテム */
+  .cart-item__details {
+    flex: 2;
+  }
+
   .cart-item__info {
     flex-direction: column;
-    gap: 16px;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .cart-item__counter {
+    gap: 8px;
   }
 
   /* 購入ボタンエリア */
   .cart-items__checkout-bar {
     padding-top: 16px;
   }
+
   .cart-items__total {
     font-size: 16px;
     margin-bottom: 16px;
@@ -313,5 +331,135 @@ main {
 
   .cart-items__checkout-bar a {
     margin-top: 16px;
+  }
+}
+
+@media (min-width: 650px) {
+  body {
+    font-size: 16px;
+  }
+
+  /* ヘッダー */
+  .header {
+    padding-left: 20px;
+  }
+
+  .header .logo {
+    font-size: 35px;
+    line-height: 70px;
+  }
+
+  .cart-icon {
+    width: 60px;
+    line-height: 70px;
+    margin-right: 16px;
+  }
+
+  .cart__total {
+    width: 27px;
+    line-height: 27px;
+    font-size: 15px;
+  }
+
+  .sp-hamburger {
+    display: none;
+  }
+
+  /* main */
+  main {
+    padding-top: 70px;
+    padding-bottom: 220px;
+  }
+
+  .content-title {
+    font-size: 20px;
+    margin: 20px 0;
+  }
+
+  /* カート内アイテム */
+  .cart-item__info h3 {
+    font-size: 18px;
+  }
+
+  .cart-item__details {
+    flex: 5;
+  }
+
+  .cart-item__delete {
+    gap: 8px;
+    padding: 8px 0;
+  }
+
+  .cart-item__delete img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .cart-item__delete span {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .cart-items__total {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1000px) {
+  /* main */
+  main {
+    padding-bottom: 250px;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .content-title {
+    font-size: 24px;
+  }
+  
+  /* カート内アイテム */
+  .cart-item__details {
+    flex: 6;
+  }
+
+  .cart-item__counter button {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .cart-item__counter span {
+    min-width: 60px;
+    font-size: 24px;
+  }
+
+  /* 購入ボタンエリア */
+  .cart-items__checkout-bar {
+    padding-top: 20px;
+    padding-bottom: 60px;
+  }
+
+  .cart-items__total {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .pc-style__checkout-flex {
+    display: flex;
+    gap: 5%;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .cart-items__checkout {
+    order: 1;
+    margin: 0;
+    height: 60px;
+    font-size: 16px;
+  }
+
+  .cart-items__checkout-bar a {
+    margin: 0;
+    border-bottom: 2px solid #333;
   }
 }
