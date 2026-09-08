@@ -97,3 +97,65 @@ main a {
   color: #fff;
   margin-top: 20px;
 }
+
+@media (max-width: 374px) {
+  .header {
+    padding-left: 8px;
+  }
+  .header .logo {
+    font-size: 18px;
+    line-height: 45px;
+  }
+}
+
+@media (min-width: 650px) {
+  body {
+    font-size: 18px;
+  }
+
+  /* ヘッダー */
+  .header {
+    padding-left: 20px;
+  }
+  .header .logo {
+    font-size: 35px;
+    line-height: 70px;
+  }
+
+
+  /* main */
+  main {
+    padding-top: 70px;
+  }
+  
+  main h2 {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  /* フッター */
+  .footer {
+    padding: 30px 5% 12px;
+  }
+
+  .footer .logo {
+    font-size: 30px;
+  }
+
+  .footer small {
+    font-size: 12px;
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 20px;
+  }
+
+  /* main */
+  main h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+}
