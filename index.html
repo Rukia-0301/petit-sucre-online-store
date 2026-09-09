@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Petit Sucre (プティ・シュクレ)</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1><a href="#" class="logo">Petit Sucre</a></h1>
+    <a href="cart.html" class="cart-icon">
+      <img src="icons/cart.svg" alt="">
+      <span class="cart__total"></span>
+    </a>
+    <div class="sp-hamburger">
+      <span class="line"></span>
+      <span class="line"></span>
+    </div>
+  </header>
+  <main>
+    <div class="mv">
+      <h2 class="mv__title">Petit Sucre</h2>
+      <div class="mv__catch">
+        <p>がんばった日にも、なんでもない日にも。</p>
+        <p>あなたを笑顔にする小さなスイーツをお届けします。</p>
+      </div>
+      <a href="./products.html" class="mv__btn">商品一覧へ</a>
+    </div>
+  </main>
+  <footer class="footer">
+    <a href="#" class="logo">Petit Sucre</a>
+    <small>&copy; Petit Sucre</small>
+  </footer>
+
+  <script>
+    'use strict';
+    {
+      const cartTotal = document.querySelector('.cart__total');
+      const getTotal = () => {
+        const counts = JSON.parse(localStorage.getItem('counts')) || {};
+        cartTotal.textContent = Object.values(counts).reduce((result, count) => {
+          return result + count;
+        }, 0);
+      };
+
+      getTotal();
+    }
+  </script>
+</body>
+
+</html>
