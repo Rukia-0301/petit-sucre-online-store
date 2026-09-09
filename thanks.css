@@ -13,6 +13,10 @@
   --accent-color: rgb(212, 93, 93);
 }
 
+html {
+  background: #513A38;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -58,6 +62,7 @@ button:focus {
 /* main */
 main {
   flex: 1;
+  height: 100％;
   padding-top: 50px;
   text-align: center;
   display: inline-flex;
